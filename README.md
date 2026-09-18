@@ -1,4 +1,4 @@
-#===== OVERVIEW =====
+===== OVERVIEW =====
 This submission implements a secure UDP communication channel between two parties, "Host" (Alice)
 and "Client" (Bob). As specified in the assignment, the two parties:
 1. Establish a shared session key K using a password-authenticated Diffie-Hellman key exchange.
@@ -20,7 +20,7 @@ Password to be memorized:
 - SecretPwd2026
 
 
-#===== REQUIREMENTS =====
+===== REQUIREMENTS =====
 OPERATING SYSTEM: WINDOWS
 LANGUAGE: PYTHON
 LANGUAGE VERSION: 3.14.6
@@ -31,13 +31,13 @@ LIBRARIES:
     - Does not require any installation.
 
 
-#===== INSTALLATION OF LIBRARY =====
+===== INSTALLATION OF LIBRARY =====
 *Open your terminal and install the pycryptodome library. Type or copy this into the terminal:
 - pip install pycryptodome
 
 
 
-#===== FOLDER STRUCTURE =====
+===== FOLDER STRUCTURE =====
 Host.py and Client.py are kept in separate directories, "Alice" and "Bob" respectively.
 Setup.py is kept in the root submission folder, since it performs the one-time setup and writes
 the parameters file into Alice's directory.
@@ -56,7 +56,7 @@ the parameters file into Alice's directory.
 - Client.py must be run from inside the Bob folder.
 
 
-#===== HOW TO RUN THE PROGRAM =====
+===== HOW TO RUN THE PROGRAM =====
 Ensure that you have 2 different terminal windows ready before running the program. Navigate
 using the 'cd' command to the location that is storing the files. (E.g., cd Desktop/Codes/Assn1)
 Both Host and Client uses the local address 127.0.0.1 on port 4444.
@@ -66,19 +66,19 @@ the Alice folder (via 'cd Alice'), NOT by running 'python Alice/Host.py' from
 the root. (Likewise for Client.py) The program looks for host_setup.txt relative to the terminal's
 current directory.
 
-##Step 1: Run Setup.py from the root folder.
+Step 1: Run Setup.py from the root folder.
 - python Setup.py
 - This will generate a 512-bit DH prime p, sets g = 2, hashes the shared password with SHA1,
   and writes p, g, and the hashed password to the Alice folder, 'Alice/host_setup.txt'.
 
-##Step 2: Navigate into the Alice folder first, then start the Host (Alice) in one of the prepared
+Step 2: Navigate into the Alice folder first, then start the Host (Alice) in one of the prepared
 terminal window.
 - cd Alice
 - python Host.py
 - Host will read host_setup.txt (previously generated from Step 1) from its own folder and
   then wait for a connection request on port 4444.
 
-##Step 3: Navigate into the Bob folder first, then start the Client (Bob) in another terminal window. 
+Step 3: Navigate into the Bob folder first, then start the Client (Bob) in another terminal window. 
 - cd Bob
 - python Client.py
 - Once the program is running, it will prompt for a user input for the password.
@@ -90,7 +90,7 @@ terminal window.
 - Success message: [+] --- HANDSHAKE COMPLETE, SECURE CHANNEL ESTABLISHED ---
 
 
-#===== USING THE CHAT =====
+===== USING THE CHAT =====
 Once the handshake is complete, both programs enter a chat loop. The Client will be prompted to
 send the first message, then the Host will be prompted next to send a reply. The two sides will
 alternate turns.
@@ -105,7 +105,7 @@ to the other side, both programs will print a termination message and close both
 connection.
 
 
-#===== NOTES =====
+===== NOTES =====
 - RC4 is used for encryption, but in modern standards is not considered secure. It is not recommended
 to be applied for real-world applications.
 
@@ -118,7 +118,7 @@ validated against degenerate values before use (e.g., 0, 1, or p-1). This is to 
 fit the scope of the assignment.
 
 
-#===== REFERENCES/CITATIONS =====
+===== REFERENCES/CITATIONS =====
 Send and Receive UDP packets via Python
 https://linuxhint.com/send_receive_udp_python/
 
