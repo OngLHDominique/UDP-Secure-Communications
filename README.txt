@@ -1,13 +1,10 @@
 ===== OVERVIEW =====
-
 This submission implements a secure UDP communication channel between two parties, "Host" (Alice)
 and "Client" (Bob). As specified in the assignment, the two parties:
-
 1. Establish a shared session key K using a password-authenticated Diffie-Hellman key exchange.
 2. Use K to encrypt (RC4) and authenticate (SHA1 based MAC) all subsequent chat messages.
 
 Files submitted:
-
 - Setup.py: Generates the Diffie-Hellman parameters (p, g) and the SHA1 hashed password, and 
 saves them to a text file for the Host.
 
@@ -20,31 +17,23 @@ Client-side.
 - README.txt
 
 Password to be memorized:
-
 - SecretPwd2026
 
 
 ===== REQUIREMENTS =====
-
 OPERATING SYSTEM: WINDOWS
-
 LANGUAGE: PYTHON
-
 LANGUAGE VERSION: 3.14.6
-
 LIBRARIES:
 - pycryptodome library: Required for Setup.py to generate the Diffie-Hellman prime.
     - Follow the instructions in the subsequent step to install the library.
-
 - Python standard library (socket, sys, hashlib, random): Required for Host.py and Client.py.
     - Does not require any installation.
 
 
 ===== INSTALLATION OF LIBRARY =====
-
 *Open your terminal and install the pycryptodome library. Type or copy this into the terminal:
 - pip install pycryptodome
-
 
 
 ===== FOLDER STRUCTURE =====
